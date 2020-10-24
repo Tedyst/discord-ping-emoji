@@ -69,6 +69,9 @@ class Ping(discord.Client):
                 db[used]["people"].append(message.author.id)
                 print(db)
                 filesave()
+                response = await message.channel.send("Salvat")
+                await asyncio.sleep(5)
+                await response.delete()
             if content[0] == "clear":
                 for emojis in db:
                     if message.author.id in db[emojis]["people"]:
