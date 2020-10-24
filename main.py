@@ -91,8 +91,8 @@ class Ping(discord.Client):
                 response += '<@{}> '.format(person)
             if response != "":
                 response = await reaction.message.channel.send(response)
-            await asyncio.sleep(20)
-            await response.delete()
+                await asyncio.sleep(20)
+                await response.delete()
 
 
 client = Ping()
